@@ -1,0 +1,14 @@
+[user]
+	name = Rafael da Silva Almeida
+	email = eusou@rafaelalmeida.net
+[core]
+	excludesfile = ~/.gitignore
+	editor = vim
+[color]
+	ui = true
+[push]
+	default = simple
+[hub]
+	protocol = https
+[pull]
+	rebase = true

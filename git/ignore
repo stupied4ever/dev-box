@@ -1,0 +1,17 @@
+# Gedit and Vim
+
+*~
+*.swp
+*.swo
+
+# Ctags
+
+tags
+
+# Bundler
+
+.bundle
+
+# Vagrant.
+
+.vagrant
