@@ -34,3 +34,6 @@ Bundle 'compactcode/alternate.vim'
 Bundle 'compactcode/open.vim'
 Bundle 'ngmy/vim-rubocop'
 Bundle 'AndrewRadev/splitjoin.vim'
+
+Bundle 'bpearson/vim-phpcs'
+Bundle 'joonty/vdebug'

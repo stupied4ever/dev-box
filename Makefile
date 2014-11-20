@@ -34,7 +34,6 @@ PACKAGES = \
 	irssi \
 	gvim \
 	zsh \
-	php \
 	thunderbird
 
 .PHONY: install packages git ack irssi tmux vim zsh
@@ -42,6 +41,26 @@ install: packages  git ack irssi tmux vim zsh
 
 packages:
 	yaourt $(PACMAN_FLAGS) $(PACKAGES)
+
+# Install PHP and dependencies
+php: $(HOME)/.php.5.6 php-pear-dependencies php-pecl-dependencies
+
+.PHONY: php-pear-dependencies
+php-pear-dependencies: $(HOME)/.php.5.6
+	$(SUDO) pear install -f PHP_CodeSniffer
+
+.PHONY: php-pecl-dependencies
+php-pecl-dependencies: $(HOME)/.php.5.6 $(HOME)/.xdebug
+
+$(HOME)/.xdebug:
+	$(SUDO) pecl install -f xdebug
+	$(SUDO) $(LINK) $(CURDIR)/php/php.ini /etc/php/conf.d/php.ini
+	$(SUDO) $(LINK) $(CURDIR)/php/php-debug /usr/bin/php-debug
+	$(TOUCH) $(HOME)/.xdebug
+
+$(HOME)/.php.5.6:
+	yaourt $(PACMAN_FLAGS) php php-pear php-composer
+	$(TOUCH) $(HOME)/.php.5.6
 
 # Install Ruby 2.1.2
 ruby: $(HOME)/.ruby.2.1.2
