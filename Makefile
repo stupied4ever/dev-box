@@ -34,7 +34,8 @@ PACKAGES = \
 	irssi \
 	gvim \
 	zsh \
-	php
+	php \
+	thunderbird
 
 .PHONY: install packages git ack irssi tmux vim zsh
 install: packages  git ack irssi tmux vim zsh
