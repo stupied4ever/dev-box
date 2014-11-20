@@ -33,10 +33,11 @@ PACKAGES = \
 	ack \
 	irssi \
 	gvim \
-	zsh
+	zsh \
+	php
 
-.PHONY: install packages ruby git ack irssi tmux vim zsh
-install: packages ruby git ack irssi tmux vim zsh
+.PHONY: install packages git ack irssi tmux vim zsh
+install: packages  git ack irssi tmux vim zsh
 
 packages:
 	yaourt $(PACMAN_FLAGS) $(PACKAGES)
