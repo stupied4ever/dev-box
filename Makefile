@@ -60,10 +60,10 @@ $(HOME)/.ruby-install:
 git: $(HOME)/.gitconfig $(HOME)/.gitignore
 
 $(HOME)/.gitconfig:
-	$(LINK) $(CURDIR)/git/.gitconfig $(HOME)/.gitconfig
+	$(LINK) $(CURDIR)/git/config $(HOME)/.gitconfig
 
 $(HOME)/.gitignore:
-	$(LINK) $(CURDIR)/git/.gitignore $(HOME)/.gitignore
+	$(LINK) $(CURDIR)/git/ignore $(HOME)/.gitignore
 
 # Configure Ack
 ack: $(HOME)/.ack
