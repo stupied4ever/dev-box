@@ -1,8 +1,8 @@
 # dev-box
 
 Here I will store all my scripts to automate my dev machine. Many of them was
-inspired by [leafac/dev-box][leafac-dev-box]. It automates my machine 
-configurations, such [vim][vim], [tmux][tmux], [ruby][ruby], [git][git], 
+inspired by [leafac/dev-box][leafac-dev-box]. It automates my machine
+configurations, such [vim][vim], [tmux][tmux], [ruby][ruby], [git][git],
 [zsh][zsh] and [oh-my-zsh][oh-my-zsh] configurations.
 
 ## Environment
@@ -16,7 +16,7 @@ as [Desktop Environment][desktop-environment] and [SLiM][slim] as
 ### Cloning
 
 ```
-$ pacman -S git
+$ pacman -S git openssh
 $ git clone git@github.com:stupied4ever/dev-box.git
 
 $ cd dev-box
