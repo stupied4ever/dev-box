@@ -36,8 +36,19 @@ PACKAGES = \
 	zsh \
 	thunderbird
 
-.PHONY: install packages git ack irssi tmux vim zsh
-install: packages  git ack irssi tmux vim zsh
+.PHONY: install yaourt packages git ack irssi tmux vim zsh
+install: yaourt packages  git ack irssi tmux vim zsh
+
+yaourt: $(HOME)/.yaourt
+
+$(HOME)/.yaourt:
+	echo | $(SUDO) tee --append /etc/pacman.conf
+	echo '[archlinuxfr]' | $(SUDO) tee --append /etc/pacman.conf
+	echo 'SigLevel = Never' | $(SUDO) tee --append /etc/pacman.conf
+	echo 'Server = http://repo.archlinux.fr/$$arch' | $(SUDO) tee --append /etc/pacman.conf
+
+	$(SUDO) pacman $(PACMAN_FLAGS) yaourt
+	$(TOUCH) $(HOME)/.yaourt
 
 packages:
 	yaourt $(PACMAN_FLAGS) $(PACKAGES)
