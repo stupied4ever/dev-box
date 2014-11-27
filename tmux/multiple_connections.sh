@@ -23,6 +23,7 @@ tmux select-layout tiled > /dev/null
 done
 tmux select-pane -t 0
 tmux set-window-option synchronize-panes on > /dev/null
+tmux set synchronize-panes on
 
 }
 
