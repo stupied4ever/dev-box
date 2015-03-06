@@ -34,7 +34,8 @@ PACKAGES = \
 	irssi \
 	gvim \
 	zsh \
-	thunderbird
+	thunderbird \
+	tmux
 
 .PHONY: install yaourt packages git ack irssi tmux vim zsh
 install: yaourt packages  git ack irssi tmux vim zsh
