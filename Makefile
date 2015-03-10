@@ -36,6 +36,7 @@ PACKAGES = \
 	zsh \
 	thunderbird \
 	tmux \
+	xorg-xrandr \
 	aws-cli
 
 .PHONY: install yaourt packages git ack irssi tmux vim zsh
