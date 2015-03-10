@@ -36,3 +36,4 @@ Bundle 'ngmy/vim-rubocop'
 Bundle 'AndrewRadev/splitjoin.vim'
 
 Bundle 'joonty/vdebug'
+Bundle 'rodjek/vim-puppet'
