@@ -55,7 +55,8 @@ $(HOME)/.yaourt:
 	$(TOUCH) $(HOME)/.yaourt
 
 packages:
-	yaourt $(PACMAN_FLAGS) $(PACKAGES)
+	yaourt $(PACMAN_FLAGS)
+	yaourt --sync --needed $(PACKAGES)
 
 # Install PHP and dependencies
 php: $(HOME)/.php.5.6 php-pear-dependencies php-pecl-dependencies
