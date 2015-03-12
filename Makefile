@@ -37,6 +37,7 @@ PACKAGES = \
 	thunderbird \
 	tmux \
 	xorg-xrandr \
+	xscreensaver \
 	aws-cli
 
 .PHONY: install yaourt packages git ack irssi tmux vim zsh
