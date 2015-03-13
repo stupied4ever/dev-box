@@ -36,6 +36,7 @@ PACKAGES = \
 	zsh \
 	thunderbird \
 	tmux \
+	xclip \
 	xorg-xrandr \
 	xscreensaver \
 	aws-cli
