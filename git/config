@@ -12,3 +12,7 @@
 	protocol = https
 [pull]
 	rebase = true
+[merge]
+	ff = only
+[log]
+	decorate = true
