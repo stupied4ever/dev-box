@@ -1,5 +1,5 @@
-" Load Vundle
-source ~/.vim/config/plugins/vundle.vim
+" Load Plug
+source ~/.vim/config/plugins/plug.vim
 
 " Load configs
 source ~/.vim/config/general/colors.vim
@@ -20,4 +20,3 @@ source ~/.vim/config/plugins/vimux-ruby-test.vim
 source ~/.vim/config/plugins/alternate.vim
 source ~/.vim/config/plugins/splitjoin.vim
 source ~/.vim/config/plugins/syntastic.vim
-
