@@ -15,10 +15,11 @@ fi
 local hosts=( $HOSTS )
 
 
-tmux new-window "ssh ${hosts[0]}"
+tmux new-window "host=${hosts[0]} ssh live"
 unset hosts[0];
 for i in "${hosts[@]}"; do
-tmux split-window -h "ssh $i"
+tmux split-window -h "host=$i ssh live"
+sleep 0.3
 tmux select-layout tiled > /dev/null
 done
 tmux select-pane -t 0

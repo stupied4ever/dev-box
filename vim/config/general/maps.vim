@@ -2,10 +2,10 @@
 let mapleader=','
 
 " Disable arrows
-map <Left> <Nop>
-map <Right> <Nop>
-map <Up> <Nop>
-map <Down> <Nop>
+" map <Left> <Nop>
+" map <Right> <Nop>
+" map <Up> <Nop>
+" map <Down> <Nop>
 
 " Map to avoid hold shift to every command
 nnoremap ; :

@@ -47,4 +47,4 @@ set list
 set listchars=tab:»\ ,trail:·
 
 " Show ruler on column 80
-set colorcolumn=80
+set colorcolumn=120

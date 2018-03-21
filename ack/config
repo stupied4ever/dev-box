@@ -5,10 +5,12 @@
 --type-set=sass=.sass,.scss
 
 # Don't search
+--ignore-file=is:tags
 --ignore-dir=log
---ignore-dir=tags
 --ignore-dir=tmp
 --ignore-dir=coverage
+--ignore-dir=vendor
 --ignore-dir=doc
+--ignore-dir=var/cache
 
 --ignore-file=match:.log

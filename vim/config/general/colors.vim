@@ -2,4 +2,4 @@
 set background=dark
 
 " Colorscheme solarized
-colorscheme solarized
+" colorscheme solarized
