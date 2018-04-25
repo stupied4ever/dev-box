@@ -1,5 +1,5 @@
 " Load Plug
-source ~/.vim/config/plugins/plug.vim
+source ~/.vim/config/plugins.vim
 
 " Load configs
 source ~/.vim/config/general/colors.vim

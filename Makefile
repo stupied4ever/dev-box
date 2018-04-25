@@ -6,6 +6,7 @@ MAKE = make
 TOUCH = touch
 
 PACKAGES = \
+	telegram-desktop \
 	git \
 	ttf-dejavu \
 	ttf-droid \
@@ -17,8 +18,6 @@ PACKAGES = \
 	p7zip \
 	wicd \
 	wicd-gtk \
-	chromium \
-	flashplugin \
 	httpie \
 	vlc \
 	ntp \
@@ -27,9 +26,6 @@ PACKAGES = \
 	python-pip \
 	mongodb \
 	gparted \
-	shutter \
-	wtf \
-	chruby \
 	ack \
 	irssi \
 	gvim \
@@ -39,7 +35,8 @@ PACKAGES = \
 	xclip \
 	xorg-xrandr \
 	xscreensaver \
-	aws-cli
+	aws-cli \
+	docker
 
 .PHONY: install yaourt packages git ack irssi tmux vim zsh
 install: yaourt packages  git ack irssi tmux vim zsh
@@ -125,11 +122,11 @@ $(HOME)/.tmux.conf:
 	$(LINK) $(CURDIR)/tmux/tmux.conf $(HOME)/.tmux.conf
 
 # Configure Vim
-vim: $(HOME)/.vim/bundle/vundle $(HOME)/.vim/config $(HOME)/.vimrc update-vim-plugins
+vim: $(HOME)/.vim/autoload/plug.vim $(HOME)/.vim/config $(HOME)/.vimrc update-vim-plugins
 
-$(HOME)/.vim/bundle/vundle:
-	$(MKDIR) $(HOME)/.vim/bundle
-	git clone git://github.com/gmarik/vundle.git $(HOME)/.vim/bundle/vundle
+$(HOME)/.vim/autoload/plug.vim:
+	curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
+    https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 
 $(HOME)/.vim/config:
 	$(LINK) $(CURDIR)/vim/config $(HOME)/.vim/config
@@ -140,7 +137,7 @@ $(HOME)/.vimrc:
 
 .PHONY: update-vim-plugins
 update-vim-plugins:
-	vim -u $(HOME)/.vim/config/plugins/vundle.vim +BundleInstall +qa
+	vim +PlugInstall
 
 # Configure oh-my-zsh
 zsh: $(HOME)/.zsh $(HOME)/.zshrc $(HOME)/.oh-my-zsh

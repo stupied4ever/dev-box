@@ -1,4 +1,6 @@
+call plug#begin('~/.vim/autoload/')
 " Define bundles via Github repos
+Plug 'scrooloose/nerdtree'
 Plug 'kien/ctrlp.vim'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-bundler'
@@ -12,7 +14,6 @@ Plug 'vim-scripts/ctags.vim'
 Plug 'thoughtbot/vim-rspec'
 Plug 'stupied4ever/vimux-ruby-test'
 Plug 'altercation/vim-colors-solarized'
-Plug 'scrooloose/nerdtree'
 Plug 'jeetsukumaran/vim-buffergator'
 Plug 'godlygeek/tabular'
 Plug 'benmills/vimux'
@@ -26,6 +27,8 @@ Plug 'AndrewRadev/splitjoin.vim'
 
 Plug 'joonty/vdebug'
 Plug 'rodjek/vim-puppet'
+
+call plug#end()
 
 " Drop Vdebug settings at the end of the file "
 let g:vdebug_options = {
