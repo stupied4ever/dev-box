@@ -11,13 +11,10 @@ PACKAGES = \
 	ttf-dejavu \
 	ttf-droid \
 	ttf-bitstream-vera \
-	evince \
 	zip \
 	unzip \
 	unrar \
 	p7zip \
-	wicd \
-	wicd-gtk \
 	httpie \
 	vlc \
 	ntp \
@@ -27,10 +24,8 @@ PACKAGES = \
 	mongodb \
 	gparted \
 	ack \
-	irssi \
 	gvim \
 	zsh \
-	thunderbird \
 	tmux \
 	xclip \
 	xorg-xrandr \
