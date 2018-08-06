@@ -100,6 +100,12 @@ ack: $(HOME)/.ack
 $(HOME)/.ack:
 	$(LINK) $(CURDIR)/ack/config $(HOME)/.ack
 
+# Configure Ctags
+ctags: $(HOME)/.ctags
+
+$(HOME)/.ctags:
+	$(LINK) $(CURDIR)/ctags/config $(HOME)/.ctags
+
 # Configure IRSSI
 irssi: $(HOME)/.irssi
 
